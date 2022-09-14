@@ -31,14 +31,21 @@ namespace Задача_2
 
         public static void FindByName(List<Patient> patients)
         {
-            Console.WriteLine("Enter the name of patient for search in list");
-            string name = Console.ReadLine();
-            var findName = from people in patients
-                           where people.Name == name
-                           select people;
-            foreach (var person in findName)
+            try
             {
-                Console.WriteLine($"{person.Name} {person.Surname}");
+                Console.WriteLine("Enter the name of patient for search in list");
+                string name = Console.ReadLine();
+                var findName = from people in patients
+                               where people.Name == name
+                               select people;
+                foreach (var person in findName)
+                {
+                    Console.WriteLine($"{person.Name} {person.Surname}");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
