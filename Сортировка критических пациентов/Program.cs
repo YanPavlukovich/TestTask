@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Сортировка_критических_пациентов;
 
 namespace Задача_2
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
+            int a = int.Parse(Console.ReadLine());
+
             var patients = new List<Patient>
             {
                 new Patient ("Alex", "Mitchel", 21, "critical"),
