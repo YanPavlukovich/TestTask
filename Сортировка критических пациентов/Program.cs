@@ -9,8 +9,6 @@ namespace Задача_2
     {
         private static void Main()
         {
-            int a = int.Parse(Console.ReadLine());
-
             var patients = new List<Patient>
             {
                 new Patient ("Alex", "Mitchel", 21, "critical"),
