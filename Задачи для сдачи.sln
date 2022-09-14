@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Сортировка критических пациентов", "Сортировка критических пациентов\Сортировка критических пациентов.csproj", "{433BA5EA-C06C-462B-8E66-C66F360835D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Готовим английский завтрак", "Готовим английский завтрак\Готовим английский завтрак.csproj", "{20F04DEE-4D0D-48B6-AE83-6D765BBB3AD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{433BA5EA-C06C-462B-8E66-C66F360835D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433BA5EA-C06C-462B-8E66-C66F360835D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433BA5EA-C06C-462B-8E66-C66F360835D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433BA5EA-C06C-462B-8E66-C66F360835D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F04DEE-4D0D-48B6-AE83-6D765BBB3AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F04DEE-4D0D-48B6-AE83-6D765BBB3AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F04DEE-4D0D-48B6-AE83-6D765BBB3AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F04DEE-4D0D-48B6-AE83-6D765BBB3AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {615EEA64-7EB0-477F-A3BE-115359616810}
+	EndGlobalSection
+EndGlobal
