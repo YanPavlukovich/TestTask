@@ -5,19 +5,27 @@ using System.Linq;
 
 namespace Задача_2
 {
-    class Methods
+    internal class Methods
     {
         public static void LessThan(List<Patient> patients)
         {
-            Console.WriteLine("Enter age to sort in descending order from this number");
-            int number = Int32.Parse(Console.ReadLine());
-
-            var lessThen = from people in patients
-                           where people.age < number
-                           select people;
-            foreach (var person in lessThen)
+            try
             {
-                Console.WriteLine($"{person.Name} {person.Surname}");
+                Console.WriteLine("Enter age to sort in descending order from this number");
+                int number = Int32.Parse(Console.ReadLine());
+
+                var lessThen = from people in patients
+                               where people.age < number
+                               select people;
+                foreach (var person in lessThen)
+                {
+                    Console.WriteLine($"{person.Name} {person.Surname}");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Input Error. You must enter a number.");
+                LessThan(patients);
             }
         }
 
