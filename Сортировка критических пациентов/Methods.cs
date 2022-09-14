@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Reflection.PortableExecutable;
+using System.Xml.Linq;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Задача_2
 {
@@ -31,21 +34,25 @@ namespace Задача_2
 
         public static void FindByName(List<Patient> patients)
         {
-            try
+            Console.WriteLine("Enter the name of patient for search in list");
+            string name = Console.ReadLine();
+
+            bool hasName = patients.Any(people => people.Name == name);
+
+            if (hasName == true)
             {
-                Console.WriteLine("Enter the name of patient for search in list");
-                string name = Console.ReadLine();
-                var findName = from people in patients
-                               where people.Name == name
-                               select people;
-                foreach (var person in findName)
+                var correctName = from people in patients
+                                  where people.Name == name
+                                  select people;
+                foreach (var person in correctName)
                 {
                     Console.WriteLine($"{person.Name} {person.Surname}");
                 }
             }
-            catch (Exception)
+            else
             {
-                throw;
+                Console.WriteLine("Input Error. Name not found. Enter a name from the list.");
+                FindByName(patients);
             }
         }
 
@@ -53,12 +60,23 @@ namespace Задача_2
         {
             Console.WriteLine("Enter the surname of patient for search in list");
             string surname = Console.ReadLine();
-            var findSurname = from people in patients
-                              where people.Surname == surname
-                              select people;
-            foreach (var person in findSurname)
+
+            bool hasSurname = patients.Any(people => people.Surname == surname);
+
+            if (hasSurname == true)
             {
-                Console.WriteLine($"{person.Name} {person.Surname}");
+                var correctSurname = from people in patients
+                                     where people.Surname == surname
+                                     select people;
+                foreach (var person in correctSurname)
+                {
+                    Console.WriteLine($"{person.Name} {person.Surname}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Input Error. Surname not found. Enter a surname from the list.");
+                FindBySurname(patients);
             }
         }
 

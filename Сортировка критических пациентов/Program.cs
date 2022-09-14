@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Сортировка_критических_пациентов;
 
 namespace Задача_2
 {
