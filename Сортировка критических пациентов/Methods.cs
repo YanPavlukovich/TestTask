@@ -27,7 +27,10 @@ namespace Задача_2
             }
             catch (FormatException)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Input Error. You must enter a number.");
+                Console.ResetColor();
+                Console.WriteLine();
                 LessThan(patients);
             }
         }
@@ -51,7 +54,10 @@ namespace Задача_2
             }
             else
             {
-                Console.WriteLine("Input Error. Name not found. Enter a name from the list.");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Input Error. Name not found.");
+                Console.ResetColor();
+                Console.WriteLine();
                 FindByName(patients);
             }
         }
@@ -75,7 +81,10 @@ namespace Задача_2
             }
             else
             {
-                Console.WriteLine("Input Error. Surname not found. Enter a surname from the list.");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Input Error. Surname not found.");
+                Console.ResetColor();
+                Console.WriteLine();
                 FindBySurname(patients);
             }
         }
@@ -88,7 +97,9 @@ namespace Задача_2
                                    select people;
             foreach (var person in criticalPatients)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"{person.Name} {person.Surname}");
+                Console.ResetColor();
             }
         }
     }
