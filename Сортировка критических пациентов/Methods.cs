@@ -26,10 +26,10 @@ namespace Задача_2
                     Console.WriteLine($"{person.Name} {person.Surname}");
                 }
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Input Error. You must enter a number.");
+                Console.WriteLine(ex.Message);
                 Console.ResetColor();
                 Console.WriteLine();
                 LessThan(patients);
