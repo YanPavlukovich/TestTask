@@ -90,8 +90,6 @@ namespace Задача_2
             Console.WriteLine("Enter the status of patient for search in list");
             string patientStatus = Console.ReadLine();
 
-            bool hasCritical = patients.Any(people => people.status == patientStatus);
-
             if (patientStatus == "critical")
             {
                 var criticalPatients = from people in patients
@@ -99,19 +97,7 @@ namespace Задача_2
                                        select people;
                 foreach (var person in criticalPatients)
                 {
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine($"{person.Name} {person.Surname}");
-                    Console.ResetColor();
-                }
-            }
-            else if (patientStatus == "normal")
-            {
-                var normalPatients = from people in patients
-                                     where people.status == "normal"
-                                     select people;
-                foreach (var person in normalPatients)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine($"{person.Name} {person.Surname}");
                     Console.ResetColor();
                 }
